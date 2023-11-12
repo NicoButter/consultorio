@@ -1,0 +1,39 @@
+<section>
+  <div class="form-box">
+    <div class="form-value">
+      <form>
+        <h2 style="color: #333A56 #333A56;">Ingreso</h2>
+
+        <div class="inputbox">
+          <i class="fa-regular fa-envelope icon" style="color: #1ECFD6;"></i>
+          <input type="email" id="email" name="email" [(ngModel)]="email" required>
+          <label for="email">Email</label>
+        </div>
+
+        <div class="inputbox">
+          <i class="fa-solid fa-lock icon" style="color: #333A56;"></i>
+          <input type="password" id="password" name="password" [(ngModel)]="password" required>
+          <label for="password">Password</label>
+        </div>
+
+        <div class="forget">
+          <label>
+            <input type="checkbox" name="remember" id="remember">
+            <span style="color: #52658F;">recordarme </span>
+            <a href="#" style="color: #52658F;">olvidé el password</a>
+          </label>
+        </div>
+
+        <button  style="background-color: #52658F;">Log in</button>
+
+        <div class="register" style="color: #52658F;">
+          <p>
+            no tiene cuenta?
+            <a href="#" style="color: #333A56;">contactese</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
