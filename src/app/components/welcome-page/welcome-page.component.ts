@@ -1,19 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
-  styleUrls: ['./welcome-page.component.css']
+  styleUrls: ['./welcome-page.component.css'],
+  styles: [`
+    :host {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      background-image: url('/assets/login-background.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  `]
 })
 export class WelcomePageComponent {
-  email: string = '';
-  password: string = '';
+  
+  constructor(private router: Router) {}
 
   login() {
-    // Aquí puedes agregar la lógica de autenticación
-    console.log('Username:', this.email);
-    console.log('Password:', this.password);
-    // Puedes redirigir al usuario a otra página después de iniciar sesión
-  }
 
+    this.router.navigate(['/home']);
+
+  }
 }
+
+

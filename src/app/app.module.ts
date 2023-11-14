@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { WelcomePageComponent } from './components/welcome-page/welcome-page.component';
+import { TurnosComponent } from './components/turnos/turnos.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WelcomePageComponent } from './components/welcome-page/welcome-page.com
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    TurnosComponent
   ],
   imports: [
     BrowserModule,
