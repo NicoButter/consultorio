@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,15 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthenticationService) {}
 
   navigateToTurnos() {
     this.router.navigate(['/turnos']);
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/welcome']);
   }
 
 }

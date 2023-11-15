@@ -1,5 +1,6 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-welcome-page',
@@ -21,12 +22,20 @@ import { Router } from '@angular/router';
 })
 export class WelcomePageComponent {
   
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthenticationService) {}
+
+  get isLoggedIn(): boolean {
+    return this.authService.isAuthenticatedUser();
+  }
 
   login() {
-
+    this.authService.login();
     this.router.navigate(['/home']);
+  }
 
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/welcome']);
   }
 }
 

@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<!-- app.component.html -->
+
+<router-outlet *ngIf="!authService.isAuthenticatedUser()"></router-outlet>
+<app-header *ngIf="authService.isAuthenticatedUser()"></app-header>
+<router-outlet *ngIf="authService.isAuthenticatedUser()"></router-outlet>
+<app-footer *ngIf="authService.isAuthenticatedUser()"></app-footer>

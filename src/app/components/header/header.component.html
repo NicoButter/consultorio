@@ -4,7 +4,7 @@
     </div>
     <nav>
          <ul>
-            <li><a (click)="navigateToTurnos()">Turnos</a></li>
+            <li><a routerLink="/turnos">Turnos</a></li>
             <li><a href="pacientes.html">Pacientes</a></li>
             <li><a href="medicos.html">Médicos</a></li>
             <li><a href="historias.html">Historias Clínicas</a></li>
@@ -14,7 +14,8 @@
     </nav>
     <div class="user-profile">
         <img src="user-avatar.png" alt="Avatar del Usuario">
-        <span>Nombre del Usuario</span>
+        <span>NOMBRE USUARIO</span>
+        <a (click)="logout()">cerrar sesion</a>
     </div>
     <div class="notifications">
         <a href="notificaciones.html">
@@ -23,3 +24,4 @@
         </a>
     </div>
 </header>
+

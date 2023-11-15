@@ -34,7 +34,6 @@ nav li {
     margin-right: 20px;
 }
 
-
 nav a {
     text-decoration: none;
     color: #fff;
@@ -84,3 +83,8 @@ nav ul li:hover {
     color: #ff0062; /* Cambia el color al hacer hover */
     opacity: 1; /* Muestra completamente el elemento */
 }
+
+nav a:hover {
+    cursor: pointer;
+}
+
