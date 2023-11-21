@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthenticationService {
+  
   private isAuthenticated: boolean = false;
 
   // Método para iniciar sesión
